@@ -6380,16 +6380,16 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   padding-left: .5rem !important
 }
 .p-3 {
-  padding: rem !important
+  padding: 1rem !important
 }
 .pt-3, .py-3 {
-  padding-top: rem !important
+  padding-top: 1rem !important
 }
 .pr-3, .px-3 {
   padding-right: 1rem !important
 }
 .pb-3, .py-3 {
-  padding-bottom: rem !important
+  padding-bottom: 1rem !important
 }
 .pl-3, .px-3 {
   padding-left: 1rem !important
