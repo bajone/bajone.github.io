@@ -20,6 +20,74 @@
 
 	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
+	<style media="print">
+    @page {
+        size: A4;
+        margin: 1cm;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Sačuvaj originalni layout (glavna kolona + aside) */
+    .resume-body .row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
+
+    /* Glavna kolona (leva strana) */
+    .resume-main {
+        width: 65% !important;
+        float: left !important;
+        page-break-inside: avoid !important;
+        padding-right: 20px !important;
+    }
+
+    /* Aside (desna kolona) */
+    .resume-aside {
+        width: 35% !important;
+        float: right !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Spriječi lomljenje unutar stavki */
+    .item, .resume-section, section, li, p, h1, h2, h3, h4 {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    /* Slike neka ostanu */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Smanji margine za više prostora */
+    .container {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .resume-wrapper {
+        padding: 15px !important;
+        margin: 0 !important;
+    }
+    
+    /* Mani font da stane više sadržaja */
+    body, p, li {
+        font-size: 11px !important;
+    }
+    
+    h3 {
+        font-size: 14px !important;
+    }
+    
+    h4 {
+        font-size: 12px !important;
+    }
+</style>
 
 </head>
 
