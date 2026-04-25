@@ -22,7 +22,7 @@
 	<style media="print">
     @page {
         size: A4;
-        margin: 1cm;
+        margin: 0.8cm;
     }
 
     body {
@@ -30,61 +30,92 @@
         print-color-adjust: exact !important;
     }
 
-    /* Sačuvaj originalni layout (glavna kolona + aside) */
+    /* Reset layout - zadrži originalni raspored */
     .resume-body .row {
         display: flex !important;
+        flex-direction: row !important;
         flex-wrap: nowrap !important;
     }
 
-    /* Glavna kolona (leva strana) */
+    /* Glavna kolona (levo) */
     .resume-main {
         width: 65% !important;
-        float: left !important;
-        page-break-inside: avoid !important;
         padding-right: 20px !important;
     }
 
-    /* Aside (desna kolona) */
+    /* Sidebar (desno) */
     .resume-aside {
         width: 35% !important;
-        float: right !important;
-        page-break-inside: avoid !important;
+        padding-left: 20px !important;
+        border-left: 1px solid #ddd !important;
+    }
+
+    /* Slika - normalne veličine */
+    .resume-profile-image {
+        width: 120px !important;
+        height: auto !important;
+        margin-right: 20px !important;
+    }
+
+    /* Kontakt sekcija - vrati na desnu stranu */
+    .resume-contact {
+        text-align: right !important;
+    }
+
+    /* Uvodni tekst - normalna veličina */
+    .resume-intro p {
+        font-size: 11pt !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Smanji visinu header-a */
+    .resume-header {
+        margin-bottom: 10px !important;
+    }
+
+    /* Spreči praznine */
+    .resume-wrapper {
+        padding: 15px !important;
+    }
+
+    .container {
+        padding: 0 !important;
+    }
+
+    /* Fontovi za štampanje */
+    body, p, li {
+        font-size: 10pt !important;
+        line-height: 1.3 !important;
+    }
+
+    h2 {
+        font-size: 18pt !important;
+    }
+
+    h3 {
+        font-size: 13pt !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    h4 {
+        font-size: 11pt !important;
     }
 
     /* Spriječi lomljenje unutar stavki */
-    .item, .resume-section, section, li, p, h1, h2, h3, h4 {
+    .item, .resume-section, section, li, p {
         page-break-inside: avoid !important;
         break-inside: avoid !important;
     }
 
-    /* Slike neka ostanu */
-    img {
-        max-width: 100% !important;
+    /* Dozvoli prelom između sekcija */
+    .work-section, .education-section, .skills-section {
         page-break-inside: avoid !important;
     }
 
-    /* Smanji margine za više prostora */
-    .container {
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    
-    .resume-wrapper {
-        padding: 15px !important;
-        margin: 0 !important;
-    }
-    
-    /* Mani font da stane više sadržaja */
-    body, p, li {
-        font-size: 11px !important;
-    }
-    
-    h3 {
-        font-size: 14px !important;
-    }
-    
-    h4 {
-        font-size: 12px !important;
+    /* Sakrij footer i nepotrebne stvari */
+    footer, .demo-banner {
+        display: none !important;
     }
 </style>
 
